@@ -1,0 +1,10 @@
+//CSWebBrowser.Url = new CSUri("file://C://tmp/roabat.html");
+//var document = CSWebBrowser.Document;
+var divElem = CSDocument.CreateElement("DIV");
+divElem.Name = "ADatumWarningDiv";
+divElem.Style = "background-color:black;color:white;font-weight:bold;width:100%;";
+divElem.InnerText = "my dog has fleas";
+CSDocument.Body.InnerHtml = "";
+divElem = CSDocument.Body.InsertAdjacentElement(CSHtmlElementInsertionOrientation.AfterBegin, divElem);
+CSMessageBox.Show(CSDocument.Body.Parent.OuterHtml);
+CSMessageBox.Show(divElem.OuterHtml);
